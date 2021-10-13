@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scan Signal Demo</title>
+		<script src="js/ScanSignal.js"></script>
+		<script src="demo-js/ScanSignalDemo.js"></script>
+		<link rel="stylesheet" href="css/stylesheet.css"></link>
+	</head>
+	<body onload="loadDefaultNumberOfWorkers()">
+		<div>
+			<div>
+				<div><label>Positive interval length</label><input id="positive-interval-length" type="number" value="300" /></div>
+				<div><label>Positive interval value</label><input id="positive-interval-value" type="number" value="20.0" /></div>
+			</div>
+			<div>
+				<div><label>Negative interval length</label><input id="negative-interval-length" type="number" value="200" /></div>
+				<div><label>Negative interval value</label><input id="negative-interval-value" type="number" value="10.0" /></div>
+			</div>
+		</div>
+		<div>
+			<div><label>Waveform length</label><input id="waveform-length" type="number" value="10000000" /></div>
+			<div><label>Noise amplitude</label><input id="noise-amplitude" type="number" value="30.0" /></div>
+			<div><label>Signal gain</label><input id="signal-gain" type="number" value="0.7" /></div>
+		</div>
+		<div>
+			<label>Number of workers</label><input id="number-of-workers" type="number" />
+		</div>
+		<button onclick="startTest()">Start</button>
+		<button onclick="cancelTest()">Cancel</button>
+		<div>
+			<textarea cols="60" rows="20" id="output-area"></textarea>
+		</div>
+	</body>
+</html>
